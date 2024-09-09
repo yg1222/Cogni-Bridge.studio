@@ -1,0 +1,135 @@
+
+{% extends "base.html" %}
+{% block title %}How To Use: Doc2Board{% endblock %}
+{% block head %}{{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3 text-md-right">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='media/Png 5.png') }}" alt="App Icon" width="100%">
+            </a> 
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-md-right">How to Use Doc2Board</h2> 
+        </div>
+        <div class="col-md-3">
+            <img class="doc2board-icon" src="{{ url_for('static', filename='media/doc2board_icon.jpeg') }}" alt="">
+        </div>
+        
+    </div>
+    <hr>
+    <div>
+        <ol class="step-bullets">
+            <li class="step-bullets">
+                <h3>Step 1: Create Your Workdoc</h3>
+                <p>In monday.com, a workdoc serves as a flexible, multi-media whiteboard where you and your team can gather all notes and ideas related to a central topic. Add individual elements to your workdoc, consolidating all thoughts and ideas in one convenient location, alongside your other work.</p>
+            </li>
+            <li class="step-bullets">
+                <div>
+                    <h3>Step 2: Conversion Options</h3>
+                    <p>You have 2 conversion types to pick from: "Doc to Board" and "Block to Board."</p>
+                    
+                    <div>
+                        <h4>Doc to Board</h4>
+                        <p>Initiates a conversion of the whole workdoc into a board.</p>
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <h4>Contextual Toolbar</h4>
+                                <p>When you're ready to convert content into a board, simply highlight any block of text to trigger the display of the Contextual toolbar which shows a list of features from your installed apps. 
+                                    Select the "Convert to Board" feature by Doc2Board. This will open the app window.
+                                </p>
+                                <img src="{{ url_for('static', filename='media/contextual_view_app_list.png') }}" alt="Doc to Board Contextual view Illustration">
+                                
+                                
+                                <img src="{{ url_for('static', filename='media/contextual_view_open_top_half.png') }}" alt="Doc to Board Contextual view Illustration">
+                                <p>In the app window, select the "Block to Board" option.</p>
+                                <img src="{{ url_for('static', filename='media/contextual_view_open_doc.png') }}" alt="Doc to Board Contextual view Illustration">
+                            </div>
+
+                            <div class="col-md-6">
+                                <h4>Topbar Menu</h4>
+                                <p>When you're ready to convert your workdoc into a board, simply click on "AI Assistant" within the Top bar menu as illustrated in the photo and select the "Convert to Board" feature by Doc2Board. This will open the app window.
+                                </p>
+                                <img src="{{ url_for('static', filename='media/topbar_view_app_list.png') }}" alt="Doc to Board Illustration">
+                                
+                                <img src="{{ url_for('static', filename='media/topbar_view_open.png') }}" alt="Doc to Board Contextual view Illustration">
+                                <p>In the app window, select the "Block to Board" option.</p>
+                                
+                                <img src="{{ url_for('static', filename='media/topbar_view_open_doc.png') }}" alt="Doc to Board Contextual view Illustration">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div>
+                        <h4>Block to Board</h4>
+                        <p>Initiates a conversion of the highlighted portion into a board.</p>
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <h4>Contextual Toolbar</h4>
+                                <p>When you're ready to convert content into a board, simply select or highlight any text in the block you desire to convert within your workdoc. 
+                                    This will cause the Contextual toolbar to appear showing a list of your installed apps with the doc action feature. 
+                                    Select the Doc2Board feature "Convert to Board." This will open the app window.
+                                </p>
+                                <img src="{{ url_for('static', filename='media/contextual_view_app_list.png') }}" alt="Doc to Board Contextual view Illustration">
+                                
+                                <img src="{{ url_for('static', filename='media/contextual_view_open_top_half.png') }}" alt="Doc to Board Contextual view Illustration">
+                                <p>In the app window, select the "Block to Board" option.</p>
+                                <img src="{{ url_for('static', filename='media/contextual_view_open_block.png') }}" alt="Doc to Board Contextual view Illustration">
+                            </div>
+
+                            <div class="col-md-6">
+                                <h4>Topbar Menu</h4>
+                                <p>When you're ready to convert content into a board, simply select or highlight any text in the block you desire to convert within your workdoc. 
+                                    Click on AI Assistant within the top bar menu as illustrated in the photo and select the Doc2Board feature "Convert to Board." This will open the app window.
+                                </p>
+                                <img src="{{ url_for('static', filename='media/topbar_view_app_list.png') }}" alt="Doc to Board Illustration">
+                                
+                                <img src="{{ url_for('static', filename='media/topbar_view_open.png') }}" alt="Doc to Board Contextual view Illustration">
+                                <p>In the app window, select the "Block to Board" option.</p>
+                                <img src="{{ url_for('static', filename='media/topbar_view_open_block.png') }}" alt="Doc to Board Contextual view Illustration">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </li>
+            <li class="step-bullets">
+                <h3>Step 3: Convert with Doc2Board</h3>
+                <p>Upon selecting Doc2Board, an app iframe will appear, offering options to convert the selected block or the entire document into a board. Choose the desired board type, provide an optional board name, and click "Start Conversion." You'll be shown the conversion status as the process completes.</p>
+                <img src="{{ url_for('static', filename='media/doc2board-img2.png') }}" alt="Image for Step 3" class="img-fluid mt-3">
+            </li>
+            <li class="step-bullets">
+                <h3>Step 4: Conversion Status</h3>
+                <p>Track the status of your conversion as Doc2Board processes your selected content. Once completed, your board will be available for use.</p>
+            </li>
+            <li class="step-bullets">
+                <h3>Step 5: Access Your Board</h3>
+                <p>The converted board will display within monday.com, complete with an AI-generated name or the name specified during conversion. Access your board directly from your workspace to begin collaborating with your team.</p>
+            </li>
+            <li class="step-bullets">
+                <h3>Step 6: Collaborate and Work</h3>
+                <p>Enjoy collaborating with your team on the newly created board, utilizing all the features monday.com offers to streamline your workflow and achieve your goals efficiently.</p>
+            </li>
+        </ol>
+    </div>
+    
+
+    
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/lISvCVFXYUM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

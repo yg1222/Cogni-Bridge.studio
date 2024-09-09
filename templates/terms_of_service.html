@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Terms of Service{% endblock %}
+{% block head %}{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/terms-and-pol.css') }}">
+{% endblock %}
+{% block content %}
+<div id="terms-of-service">
+    <h1>Terms of Service</h1>
+
+    <div class="section">
+        <h2>1. Use of Services</h2>
+        <p>You may use our Services only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+        <ul>
+            <li>Violate any applicable laws or regulations.</li>
+            <li>Infringe upon the rights of others.</li>
+            <li>Interfere with the operation of our website or Services.</li>
+            <li>Upload, transmit, or distribute any harmful, unlawful, or inappropriate content.</li>
+            <li>Attempt to gain unauthorized access to our website or Services.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Intellectual Property Rights</h2>
+        <p>All content and materials available on our website and Services, including text, graphics, logos, images, and software, are the property of Cogni-Bridge or its licensors and are protected by copyright, trademark, and other intellectual property laws.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Privacy</h2>
+        <p>Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and safeguard your information when you visit our website or use our Services.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Disclaimer of Warranties</h2>
+        <p>Our website and Services are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. We do not warrant that our website or Services will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Limitation of Liability</h2>
+        <p>In no event shall Cogni-Bridge be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with your use of our website or Services, even if we have been advised of the possibility of such damages. Your sole remedy for dissatisfaction with our website or Services is to stop using them.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Indemnification</h2>
+        <p>You agree to indemnify and hold Cogni-Bridge, its affiliates, officers, directors, employees, and agents harmless from any claims, losses, damages, liabilities, and expenses (including attorneys' fees) arising out of or in connection with your use of our website or Services, your violation of these Terms, or your violation of any rights of another party.</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws applicable to the users' jurisdiction, without regard to its conflict of law principles.</p>
+    </div>
+
+    <div class="section">
+        <h2>8. Changes to Terms</h2>
+        <p>We may update these Terms from time to time without prior notice. Any changes will be effective immediately upon posting on this page, with the effective date indicated at the top of the page. Your continued use of our website or Services after any such changes constitutes your acceptance of the revised Terms.</p>
+    </div>
+
+    <div class="section">
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or concerns about these Terms, please contact us at support@cogni-bridge.studio.</p>
+    </div>
+
+    <footer>
+        <p>Last updated: 26 April 2024</p>
+    </footer>
+</div>
+{% endblock %}

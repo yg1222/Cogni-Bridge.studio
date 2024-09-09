@@ -1,0 +1,29 @@
+.pricing-table {
+    margin: 50px auto;
+    text-align: center;
+}
+.card {
+    margin: 20px;
+}
+.card-title {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.card-price {
+    font-size: 32px;
+    color: #007bff;
+    margin: 20px 0;
+}
+.card-features {
+    list-style-type: none;
+    padding: 0;
+}
+.card-features li {
+    margin: 10px 0;
+}
+/* #content {
+    padding-bottom: 20px;
+}
+.pricing-table div {
+    margin-bottom: 20px;
+} */

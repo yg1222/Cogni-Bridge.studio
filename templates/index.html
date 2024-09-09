@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+    {{ super() }}
+    <!-- <style type="text/css">
+        .important { color: #336699; }
+    </style> -->
+{% endblock %}
+
+{% block banner %}
+
+<div class="banner_main">
+   <h1 class="banner_taital">Streamline Your</h1>
+   <h1 class="banner_taital_1">Workflow</h1>
+   <p class="banner_text">Our suite of AI-powered apps is designed to revolutionize the way you work, making tasks simpler, projects more manageable, and collaboration effortless. </p>
+   <div class="btn_main">
+      <div class="more_bt"><a href="#contact-section">Contact Us</a></div>
+      <div class="contact_bt">
+         <a href="https://auth.monday.com/oauth2/authorize?client_id=787e3a73ab310b94ea08b147d12dfb57&response_type=install" target="_blank">
+         <svg class="monday-icon" xmlns="https://www.w3.org/TR/2018/CR-SVG2-20181004/" length="auto" viewBox="-1.66 -4.10204932 243.05 147.51204932" width="1rem"><path d="m120.24 143.16c-10.63-.26-19.4-4.95-25-14.74-5.74-10.12-5.49-20.48.63-30.35 14.57-23.49 29.33-46.85 44-70.27 3-4.79 5.93-9.65 9.07-14.35a29.4 29.4 0 0 1 40-9.09c13.81 8.51 18.43 26.21 9.83 40.16q-26.37 42.95-53.49 85.48c-5.57 8.77-14.02 13-25.04 13.16z" fill="#ffcb00"></path><path d="m28.94 143.16c-10.73-.26-19.45-5.16-24.94-14.91-5.66-10.12-5.3-20.5.84-30.37q23.51-37.72 47.23-75.33c2-3.24 4-6.56 6.14-9.7a29.41 29.41 0 0 1 49.41 31.86c-17.52 28.29-35.28 56.48-53.05 84.64-5.77 9.13-14.26 13.65-25.63 13.81z" fill="#ff3d57"></path><path d="m212.13 85.82c16.17.08 29.26 12.93 29.23 28.69 0 16-13.44 28.9-29.76 28.7s-29.18-12.91-29.16-28.74c.02-16.06 13.16-28.75 29.69-28.65z" fill="#00d647"></path></svg> Install</a>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+{% block content %}
+   <!-- about section start -->
+   <div id="about-section" class="about_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <h1 class="about_taital">About Cogni-Bridge</h1>
+               <p class="about_text">At Cogni-Bridge, we believe in harnessing the power of artificial intelligence to simplify complex tasks and drive productivity. With a team of experts dedicated to creating intuitive solutions, we are committed to helping businesses and professionals thrive in today's fast-paced digital landscape.</p>
+               <div class="read_bt"><a href="#what-we-do-section">Read More</a></div>
+            </div>
+            <div class="col-md-6">
+               <div><img src="{{ url_for('static', filename='images/img-1.png') }}" class="image_1"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--about section end -->
+   <!--services section start -->
+   <div id="what-we-do-section" class="services_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <h1 class="services_taital">What We Do </h1>
+               <div class="image_2"><img src="{{ url_for('static', filename='images/img-2.png') }}"></div>
+            </div>
+            <div class="col-md-6">
+               <div class="box_main">
+                  <h1 class="technology_text">Innovative Technology</h1>
+                  <p class="what_we_do_text">Our apps leverage the latest advancements in artificial intelligence to deliver unparalleled accuracy and efficiency.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="image_2"><img src="{{ url_for('static', filename='images/img-3.png') }}"></div>
+            </div>
+            <div class="col-md-6">
+               <div class="box_main">
+                  <h1 class="technology_text">User-Friendly Interface</h1>
+                  <p class="what_we_do_text">We prioritize usability and simplicity, ensuring that our apps are intuitive and easy to navigate for users of all skill levels.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="image_2"><img src="{{ url_for('static', filename='images/img-4.png') }}"></div>
+            </div>
+            <div class="col-md-6">
+               <div class="box_main">
+                  <h1 class="technology_text">Seamless Integration</h1>
+                  <p class="what_we_do_text">Our tools seamlessly integrate with popular platforms like monday.com, allowing you to maximize efficiency without disrupting your existing workflow.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="image_2"><img src="{{ url_for('static', filename='images/img-5.png') }}"></div>
+            </div>
+            <div class="col-md-6">
+               <div class="box_main">
+                  <h1 class="technology_text">Dedicated Support</h1>
+                  <p class="what_we_do_text">Our team of experts is here to provide ongoing support and assistance, ensuring that you get the most out of our apps every step of the way.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--services section end -->
+   <!--software section start -->
+   <div id="app-section" class="software_section layout_padding">
+      <div class="container">
+         <h1 class="software_taital">Our App</h1>
+
+         <div class="container">
+            <p class="software_text">Explore Our Innovative App: Doc2Board for monday.com</p>
+            <div>
+               <button type="button" id="install-btn" class="btn btn-light">
+                  <svg class="monday-icon" xmlns="https://www.w3.org/TR/2018/CR-SVG2-20181004/" 
+                     length="auto" viewBox="-1.66 -4.10204932 243.05 147.51204932"
+                     width="1rem"><path d="m120.24 143.16c-10.63-.26-19.4-4.95-25-14.74-5.74-10.12-5.49-20.48.63-30.35 14.57-23.49 29.33-46.85 44-70.27 3-4.79 5.93-9.65 9.07-14.35a29.4 29.4 0 0 1 40-9.09c13.81 8.51 18.43 26.21 9.83 40.16q-26.37 42.95-53.49 85.48c-5.57 8.77-14.02 13-25.04 13.16z" 
+                     fill="#ffcb00"></path><path d="m28.94 143.16c-10.73-.26-19.45-5.16-24.94-14.91-5.66-10.12-5.3-20.5.84-30.37q23.51-37.72 47.23-75.33c2-3.24 4-6.56 6.14-9.7a29.41 29.41 0 0 1 49.41 31.86c-17.52 28.29-35.28 56.48-53.05 84.64-5.77 9.13-14.26 13.65-25.63 13.81z" fill="#ff3d57"></path><path d="m212.13 85.82c16.17.08 29.26 12.93 29.23 28.69 0 16-13.44 28.9-29.76 28.7s-29.18-12.91-29.16-28.74c.02-16.06 13.16-28.75 29.69-28.65z" fill="#00d647"></path>
+                  </svg> Install Doc2Board
+               </button>
+            </div>
+            <br>
+            <div>
+               <a class="demo-btn" href="/how_to_use" target="_blank">How to use</a>
+               <a class="demo-btn" href="/pricing" target="_blank">Pricing</a>
+               <a class="demo-btn" href="/doc2board" target="_blank">Learn more about Doc2Board</a>
+            </div>
+         </div>
+         <div class="software_section_2 layout_padding">
+            <div class="doc2board-section">
+               <div class="doc2board-promo-video-div">
+                  <video class="doc2board-promo-video" controls>
+                     <source src="{{ url_for('static', filename='media/Doc2Board_promo_video.mp4') }}" type="video/mp4">
+                   Your browser does not support the video tag.
+                   </video>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--software section end -->
+   <!--works section start -->
+   <!-- <div id="how-it-works-section" class="works_section layout_padding">
+      <div class="container htu-section-container">
+         <h1 class="work_taital">How It Works</h1>
+         <div class="works_section_2 layout_padding">
+            <div class="row">
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 1: Create Your Workdoc</h3>
+                  <p class="lorem_text">In monday.com, a workdoc serves as a flexible, multi-media whiteboard where you and your team can gather all notes and ideas related to a central topic. Add individual elements to your workdoc, consolidating all thoughts and ideas in one convenient location, alongside your other work.</p>
+               </div>
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 2: Select Your Content</h3>
+                  <p class="lorem_text">When you're ready to convert content into a board, simply select or highlight any text in the block you desire to convert within your workdoc. This will cause the Add Block Menu to appear, providing access to Doc2Board: Boardcaster, our intuitive app.</p>
+               </div>
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 3: Convert with Doc2Board</h3>
+                  <p class="lorem_text">Upon selecting Doc2Board, an app iframe will appear, offering options to convert the selected block or the entire document into a board. Choose the desired board type, provide an optional board name and click "Start Conversion." You'll be shown the conversion status as the process completes.</p>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 4: Conversion Status</h3>
+                  <p class="lorem_text">Track the status of your conversion as Doc2Board processes your selected content. Once completed, your board will be available for use</p>
+               </div>
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 5: Access Your Board</h3>
+                  <p class="lorem_text">The converted board will display within monday.com, complete with an ai generated name or the name specified during conversion. Access your board directly from your workspace to begin collaborating with your team.</p>
+               </div>
+               <div class="col-sm-4">
+                  <h3 class="fully_text">Step 6: Collaborate and Work</h3>
+                  <p class="lorem_text"></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div> -->
+   <!--works section end -->
+   <!--contact section start -->
+   <div id="contact-section" class="contact_section layout_padding">
+      <div class="container">
+         <h1 class="work_taital">Get In Touch</h1>
+      </div>
+      <div class="contact_section_2">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 padding_0">
+                  <div><img src="{{ url_for('static', filename='images/img-10.png') }}" class="image_10"></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="email_text">
+                     <div class="form-group">
+                        <input type="text" class="email-bt" id="sender-name" placeholder="Name" name="Name">
+                     </div>
+                     <div class="form-group">
+                        <input type="email" class="email-bt" id="sender-email" placeholder="Email" name="Email">
+                     </div>
+                     <div class="form-group">
+                        <textarea class="massage-bt" id="sender-message" placeholder="Message" rows="5" id="sender-message"
+                           name="Massage"></textarea>
+                     </div>
+                     <span id="message_response"></span>
+                     <button id="send_btn">SEND</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--contact section end -->
+   
+{% endblock %}
+
+
+
+
+
+
+

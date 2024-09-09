@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Pricing{% endblock %}
+{% block head %}{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pricing.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="">
+        <div class="col-md-3 text-md-right">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='media/Png 5.png') }}" alt="App Icon" width="100%">
+            </a> 
+        </div>
+        <!-- <div class="col-md-9">
+            <h2 class="text-md-left">Doc2Board Pricing Plans</h2>
+        </div> -->
+    </div>
+    <hr>
+    <div class="container" id="doc2board-pricing-container">
+        <div class="text-center my-5">
+            <h1>Doc2Board Pricing Plans</h1>
+            <!-- <p>Select the plan that suits your needs.</p> -->
+        </div>
+        <div class="row pricing-table">
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic</h5>
+                        <p class="card-price">$29</p>
+                        <p>Up to 15 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                            <li>Standard support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro</h5>
+                        <p class="card-price">$89</p>
+                        <p>Up to 50 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                            <li>Standard support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro +</h5>
+                        <p class="card-price">$159</p>
+                        <p>Up to 100 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise</h5>
+                        <p class="card-price">$339</p>
+                        <p>Up to 200 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enterprise Plus</h5>
+                        <p class="card-price">$2499</p>
+                        <p>Up to 2000 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                            <li>Dedicated support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
