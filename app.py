@@ -64,17 +64,20 @@ def index():
 @app.route('/how_to_use')
 def how_to_use():
     current_route = request.path
-    return render_template('htu_doc2board.html', current_route=current_route)
+    return render_template('htu_doc2board.html', current_route=current_route,
+                            current_year=current_year)
 
 @app.route('/doc2board/how_to_use')
 def how_to_use_d2b():
     current_route = request.path
-    return render_template('htu_doc2board.html', current_route=current_route)
+    return render_template('htu_doc2board.html', current_route=current_route,
+                            current_year=current_year)
 
 @app.route('/doc2board')
 def doc2board():
     current_route = request.path
-    return render_template('doc2board.html', current_route=current_route)
+    return render_template('doc2board.html', current_route=current_route,
+                            current_year=current_year)
 
 
 @app.route('/pricing')
