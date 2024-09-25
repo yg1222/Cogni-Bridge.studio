@@ -135,9 +135,23 @@ body{
         font-size: 24px;
     }
 }
-/* @media only screen and (max-width: 600px) {
-    .doc2board-promo-video {
-        width: 98%; 
-        height:auto;
+
+
+@media only screen and (min-width: 800px) {
+    .htu-promo-video {
+        width: 550px; 
+        height:350px;
     }
-} */
+}
+
+.doc-to-board-section{
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.block-to-board-section{
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
