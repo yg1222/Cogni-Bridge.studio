@@ -10,9 +10,10 @@
     margin: 20px 0;
 }
 .card-price {
-    font-size: 32px;
-    color: #007bff;
+    font-size: 24px;
+    color: #a100ff;
     margin: 20px 0;
+    font-weight: bold;
 }
 .card-features {
     list-style-type: none;
@@ -20,6 +21,10 @@
 }
 .card-features li {
     margin: 10px 0;
+}
+
+.description {
+    font-weight: 500;
 }
 /* #content {
     padding-bottom: 20px;
@@ -30,6 +35,20 @@
 
 .toggle-container {
     justify-self: center;
+}
+
+.recommended {
+    border: 2px solid #a100ff;
+    background-color: #f8f5f9;
+}
+
+.recommended-badge {
+    background-color: #a100ff;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85em;
 }
 
 .switch {
