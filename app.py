@@ -80,10 +80,10 @@ def doc2board():
                             current_year=current_year)
 
 
-@app.route('/pricing')
-def pricing():
+@app.route('/doc2board/pricing')
+def doc2board_pricing():
     current_route = request.path
-    return render_template('pricing.html', current_route=current_route,
+    return render_template('pricing_d2b.html', current_route=current_route,
                            current_year=current_year)
 
 

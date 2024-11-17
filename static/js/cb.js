@@ -10,20 +10,20 @@ gtag('config', 'AW-16640354062');
 function generateUniqueID() {
    // Generates unique IDs
    return Date.now() + '-' + Math.floor(Math.random() * 1000000);
- }
+}
 
 function gtag_report_conversion() {
-   try{
+   try {
       let transactionId = generateUniqueID();
       gtag('event', 'conversion', {
-            'send_to': 'AW-16640354062/odkACNyF4MEZEI7O3v49',
-            'value': 5.0,
-            'currency': 'CAD',
-            'transaction_id': transactionId
+         'send_to': 'AW-16640354062/odkACNyF4MEZEI7O3v49',
+         'value': 5.0,
+         'currency': 'CAD',
+         'transaction_id': transactionId
       });
       return false;
    }
-   catch(error){
+   catch (error) {
       console.error(error)
    }
 }
@@ -33,16 +33,18 @@ const serverUrl = window.location.origin
 
 // Install buttons on pages with install buttons will have the install-btn as id
 // redirect on install click
-document.getElementById('install-btn').addEventListener('click', () => {
-   let installUrl = "https://auth.monday.com/oauth2/authorize?client_id=787e3a73ab310b94ea08b147d12dfb57&response_type=install";
+try {
+   document.getElementById('install-btn').addEventListener('click', () => {
+      let installUrl = "https://auth.monday.com/oauth2/authorize?client_id=787e3a73ab310b94ea08b147d12dfb57&response_type=install";
       window.open(installUrl, '_blank');
-});
-// google tracking on install click
-document.getElementById('install-btn').addEventListener('click', () => {
-   if (window.location.hostname === 'cogni-bridge.studio'){
+   });
+   // google tracking on install click
+   document.getElementById('install-btn').addEventListener('click', () => {
+      if (window.location.hostname === 'cogni-bridge.studio') {
          gtag_report_conversion()
       }
-});
+   });
+} catch (e) { console.error(e) }
 
 // Theme code -- end
 if (window.location.pathname == "/") {
@@ -84,12 +86,15 @@ if (window.location.pathname == "/") {
                   headers: {
                      'Content-Type': 'application/json',
                   },
-                  body: JSON.stringify({"sender_name":senderName.value,
-                  "sender_email":senderEmail.value,
-                  "sender_message":senderMessage.value})};
-               fetch(serverUrl+'/email_notify', notifyOpt).then(res =>{
+                  body: JSON.stringify({
+                     "sender_name": senderName.value,
+                     "sender_email": senderEmail.value,
+                     "sender_message": senderMessage.value
+                  })
+               };
+               fetch(serverUrl + '/email_notify', notifyOpt).then(res => {
                   // console.log(res.status)
-                  if (res.status == 200){
+                  if (res.status == 200) {
                      document.getElementById('contact-section').innerHTML = '<h3 class="work_taital">Thank you. Your message was received.</h3>';
                   }
                })
@@ -102,6 +107,22 @@ if (window.location.pathname == "/") {
 }
 
 // Doc2Board page
-if (window.location.pathname === "/doc2board"){
+if (window.location.pathname === "/doc2board") {
    document.getElementById('header-logo').style.maxWidth = '35%';
 }
+
+
+// Doc2board pricing page
+const pricingToggle = document.getElementById('pricing-toggle');
+const proPrice = document.querySelector('.pro-price');
+const unlimitedPrice = document.querySelector('.unlimited-price');
+
+pricingToggle.addEventListener('change', () => {
+   if (pricingToggle.checked) {
+      proPrice.textContent = '$14';
+      unlimitedPrice.textContent = '$54';
+   } else {
+      proPrice.textContent = '$19';
+      unlimitedPrice.textContent = '$59';
+   }
+});

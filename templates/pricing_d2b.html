@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Pricing{% endblock %}
+{% block head %}{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pricing.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="container" id="doc2board-pricing-container">
+        <div class="text-center my-5">
+            <div>
+                <h1>Doc2Board Pricing Plans</h1>
+                <img class="doc2board-icon" src="{{ url_for('static', filename='media/doc2board_icon.jpeg') }}" alt="">
+            </div>
+            <!-- <p>Select the plan that suits your needs.</p> -->
+        </div>
+
+        <div class="toggle-container">
+            <span class="monthly-yearly-text">Monthly</span>
+            <label class="switch">
+                <input type="checkbox" checked id="pricing-toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="monthly-yearly-text">Yearly</span>
+        </div>
+
+        <div class="row pricing-table">
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Community</h5>
+                        <p class="card-price community-price">$0</p>
+                        <p class="community-description">Up to 10 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro</h5>
+                        <p class="card-price pro-price">$14</p>
+                        <p class="pro-description">Up to 50 Boards per Month</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unlimited</h5>
+                        <p class="card-price unlimited-price">$54</p>
+                        <p class="unlimited-description">Unlimited Boards</p>
+                        <ul class="card-features">
+                            <li>Unlimited Users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
