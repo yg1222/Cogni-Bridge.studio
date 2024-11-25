@@ -33,7 +33,7 @@ csp = {
                  "https://fonts.gstatic.com"],
     'img-src': ["'self'", "https://www.youtube.com", "data:", "https://www.google.com", 
                 "https://www.google.ca", "https://googleads.g.doubleclick.net"],
-    'connect-src': ["'self'", "https://cb-server-production.up.railway.app"],
+    'connect-src': ["'self'", "https://cb-server-production.up.railway.app", "https://dunnoservicesinc.com"],
     'frame-src': ["'self'", "https://www.youtube.com", "https://td.doubleclick.net"], 
     'object-src': ["'none'"],
     'media-src': ["'self'"]
