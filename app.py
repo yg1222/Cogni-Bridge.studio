@@ -107,8 +107,16 @@ def monday_association():
     return (rtn_str)
 
 
-@app.route('/email_notify', methods=["POST", "GET"])
+@app.route('/email_notify', methods=["POST", "GET", "OPTIONS"])
 def email_notify():
+    # Handle preflight OPTIONS request
+    if request.method == 'OPTIONS':
+        response = jsonify({"message": "Preflight OK"})
+        response.headers.add("Access-Control-Allow-Origin", "https://dunnoservicesinc.com/")
+        response.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response, 204
+
     if request.method == 'POST':
         incoming_data = json.loads(request.data)
         sender_name = incoming_data['sender_name']
@@ -126,9 +134,16 @@ def email_notify():
                 <p>Thank you!</p>
             """
         helpers.send_message_received_notification(html)
-        return jsonify({"message":"success"}), 200
-    else:
-        return "Bad request", 400
+        response = jsonify({"message": "success"})
+        response.headers.add("Access-Control-Allow-Origin", "https://dunnoservicesinc.com/")
+        response.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response, 200
+
+    # Handle bad requests
+    response = jsonify({"message": "Bad request"})
+    response.headers.add("Access-Control-Allow-Origin", "https://dunnoservicesinc.com/")
+    return response, 400
 
 
 if __name__ == '__main__':
