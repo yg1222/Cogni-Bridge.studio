@@ -7,9 +7,20 @@ import helpers
 from dotenv import load_dotenv
 from flask_talisman import Talisman
 from flask_mail import Mail, Message
+import logging
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Configure logging
+log_format = '[%(asctime)s] %(levelname)s [line %(lineno)d in %(module)s]: %(message)s'
+log_datefmt='%Y-%m-%d %H:%M:%S'
+logging.basicConfig(
+    format=log_format,
+    datefmt=log_datefmt
+)
+log_level = os.getenv('LOG_LEVEL', 'WARNING').upper()
+logging.getLogger().setLevel(getattr(logging, log_level, logging.INFO))
 
 app = Flask(__name__)
 
@@ -109,8 +120,10 @@ def monday_association():
 
 @app.route('/email_notify', methods=["POST", "GET", "OPTIONS"])
 def email_notify():
+    logging.info(request.headers)
     # Handle preflight OPTIONS request
     if request.method == 'OPTIONS':
+        logging.info(request.headers)
         response = jsonify({"message": "Preflight OK"})
         response.headers.add("Access-Control-Allow-Origin", "https://dunnoservicesinc.com/")
         response.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
@@ -133,7 +146,9 @@ def email_notify():
                 </ul>
                 <p>Thank you!</p>
             """
+        logging.debug("Attempting to send email")
         helpers.send_message_received_notification(html)
+        logging.debug("Sent email")
         response = jsonify({"message": "success"})
         response.headers.add("Access-Control-Allow-Origin", "https://dunnoservicesinc.com/")
         response.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
